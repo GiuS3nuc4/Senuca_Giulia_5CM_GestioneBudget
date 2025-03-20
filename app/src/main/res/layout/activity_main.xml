@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Campo input per il budget iniziale -->
+    <EditText
+        android:id="@+id/budgetAmountEditText"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:minHeight="48dp"
+        android:padding="12dp"
+        android:hint="Inserisci il budget iniziale"
+        android:inputType="numberDecimal" />
+
+    <!-- Pulsanti per le categorie di spesa -->
+
+    <Button
+        android:id="@+id/setBudgetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#673AB7"
+        android:text="Imposta Budget" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingTop="10dp">
+
+        <Button
+            android:id="@+id/foodButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#FF5722"
+            android:text="Cibo" />
+
+        <Button
+            android:id="@+id/transportButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#4CAF50"
+            android:text="Trasporti" />
+
+        <Button
+            android:id="@+id/incomeButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#3F51B5"
+            android:text="Ricavo" />
+
+        <Button
+            android:id="@+id/otherButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#FFC107"
+            android:text="Altro" />
+    </LinearLayout>
+
+    <!-- Sezione dei campi di input per la transazione (inizialmente nascosta) -->
+    <LinearLayout
+        android:id="@+id/transactionFieldsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="10dp"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/transactionDescriptionEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Descrizione"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/transactionAmountEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Importo"
+            android:inputType="numberDecimal" />
+
+        <Button
+            android:id="@+id/submitButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Invio" />
+    </LinearLayout>
+
+    <!-- Informazioni sul budget e sulle spese -->
+    <TextView
+        android:id="@+id/budgetInfoTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Budget iniziale: €0.00"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:paddingTop="10dp" />
+
+    <TextView
+        android:id="@+id/totalExpensesTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Totale spese: €0.00" />
+
+    <TextView
+        android:id="@+id/foodExpensesTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cibo: €0.00 (0%)" />
+
+    <TextView
+        android:id="@+id/transportExpensesTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Trasporti: €0.00 (0%)" />
+
+    <TextView
+        android:id="@+id/otherExpensesTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Altro: €0.00 (0%)" />
+
+    <TextView
+        android:id="@+id/incomeTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ricavo: €0.00 (0%)" />
+
+    <TextView
+        android:id="@+id/totalGeneralTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Totale Generale: €0.00"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:paddingTop="10dp" />
+
+</LinearLayout>
